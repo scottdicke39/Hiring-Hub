@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 20% 98%;
+    --foreground: 220 30% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 12%;
+
+    --primary: 165 75% 28%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 20% 95%;
+    --secondary-foreground: 220 30% 12%;
+
+    --muted: 240 15% 94%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 165 35% 92%;
+    --accent-foreground: 165 75% 24%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 15% 90%;
+    --input: 240 15% 90%;
+    --ring: 165 75% 28%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 185 77% 8%;
+    --sidebar-foreground: 240 20% 96%;
+    --sidebar-primary: 75 96% 65%;
+    --sidebar-primary-foreground: 185 77% 8%;
+    --sidebar-accent: 185 40% 14%;
+    --sidebar-accent-foreground: 75 96% 65%;
+    --sidebar-border: 185 40% 14%;
+    --sidebar-ring: 75 96% 55%;
+
+    /* Handshake brand */
+    --handshake-lime: 75 96% 65%;
+    --handshake-nori: 185 77% 8%;
+    --handshake-neutral: 240 20% 96%;
+
+    /* Fun accent palette */
+    --fun-coral: 12 90% 62%;
+    --fun-sky: 200 90% 55%;
+    --fun-violet: 265 75% 60%;
+    --fun-amber: 38 95% 55%;
+    --fun-emerald: 155 70% 42%;
+    --fun-rose: 340 80% 58%;
+    --fun-indigo: 235 70% 58%;
+    --fun-teal: 175 70% 40%;
+  }
+
+  .dark {
+    --background: 185 77% 5%;
+    --foreground: 240 20% 96%;
+
+    --card: 185 60% 8%;
+    --card-foreground: 240 20% 96%;
+
+    --popover: 185 60% 8%;
+    --popover-foreground: 240 20% 96%;
+
+    --primary: 75 96% 65%;
+    --primary-foreground: 185 77% 8%;
+
+    --secondary: 185 40% 14%;
+    --secondary-foreground: 240 20% 96%;
+
+    --muted: 185 40% 14%;
+    --muted-foreground: 185 20% 55%;
+
+    --accent: 185 40% 14%;
+    --accent-foreground: 75 96% 70%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 185 40% 14%;
+    --input: 185 40% 14%;
+    --ring: 75 96% 55%;
+
+    --sidebar-background: 185 77% 5%;
+    --sidebar-foreground: 240 20% 96%;
+    --sidebar-primary: 75 96% 65%;
+    --sidebar-primary-foreground: 185 77% 8%;
+    --sidebar-accent: 185 40% 14%;
+    --sidebar-accent-foreground: 75 96% 70%;
+    --sidebar-border: 185 40% 14%;
+    --sidebar-ring: 75 96% 55%;
+
+    --fun-coral: 12 85% 55%;
+    --fun-sky: 200 85% 50%;
+    --fun-violet: 265 70% 55%;
+    --fun-amber: 38 90% 50%;
+    --fun-emerald: 155 65% 38%;
+    --fun-rose: 340 75% 52%;
+    --fun-indigo: 235 65% 52%;
+    --fun-teal: 175 65% 36%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .fun-gradient-hero {
+    background: linear-gradient(
+      135deg,
+      hsl(185 77% 8%) 0%,
+      hsl(185 60% 14%) 40%,
+      hsl(165 50% 20%) 100%
+    );
+  }
+
+  .fun-card-glow {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .fun-card-glow:hover {
+    box-shadow: 0 8px 30px -8px hsl(var(--ring) / 0.2);
+    transform: translateY(-3px);
+  }
+
+  .fun-dot-pattern {
+    background-image: radial-gradient(hsl(var(--border)) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
